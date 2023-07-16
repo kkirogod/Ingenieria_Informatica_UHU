@@ -1,0 +1,6 @@
+Fichero de texto
+para la segunda práctica
+de "Estructuras de Datos I"
+
+cifra y descifra...
+

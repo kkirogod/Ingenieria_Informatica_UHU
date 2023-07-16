@@ -1,0 +1,3 @@
+stoi(__) -> pasa un string a int
+
+getline((nombreficherotexto), (____)) -> lee del fichero de texto una línea (string) entera (hasta encontrar intro)

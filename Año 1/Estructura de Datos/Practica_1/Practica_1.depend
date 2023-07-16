@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1646913365 source:c:\users\usuario\desktop\practica_1\main.cpp
+	<iostream>
+
+1650540206 source:h:\uhu\e.datos\practica_1\src\clasificacion.cpp
+	"clasificacion.h"
+	<iostream>
+	<stdlib.h>
+	<time.h>
+
+1650539862 h:\uhu\e.datos\practica_1\include\clasificacion.h
+
+1650540074 source:h:\uhu\e.datos\practica_1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"clasificacion.h"
+	"prueba.h"
+
+1650535398 h:\uhu\e.datos\practica_1\include\prueba.h
+	<fstream>
+	<cstring>
+	"clasificacion.h"
+
+1650406018 source:e:\uhu\e.datos\practica_1\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"clasificacion.h"
+	"prueba.h"
+
+1650381222 e:\uhu\e.datos\practica_1\include\clasificacion.h
+
+1649330156 e:\uhu\e.datos\practica_1\include\prueba.h
+	<fstream>
+	<cstring>
+	"clasificacion.h"
+
+1650471508 source:e:\uhu\e.datos\practica_1\src\clasificacion.cpp
+	"clasificacion.h"
+	<iostream>
+	<stdlib.h>
+	<time.h>
+
+1650540074 source:h:\uhu\e.datos\practica_1\src\prueba.cpp
+	"prueba.h"
+	"clasificacion.h"
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1650471480 source:e:\uhu\e.datos\practica_1\src\prueba.cpp
+	"prueba.h"
+	"clasificacion.h"
+	<iostream>
+	<time.h>
+	<stdlib.h>
+

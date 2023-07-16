@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1646912469 source:c:\users\usuario\desktop\practica_0\main.cpp
+	<iostream>
+	<conio.h>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"matriz.h"
+	"quebrado.h"
+	"complejo.h"
+
+1646912165 c:\users\usuario\desktop\practica_0\include\matriz.h
+	"quebrado.h"
+
+1646912076 c:\users\usuario\desktop\practica_0\include\quebrado.h
+
+1646912076 c:\users\usuario\desktop\practica_0\include\complejo.h
+
+1646912469 source:c:\users\usuario\desktop\practica_0\src\complejo.cpp
+	"complejo.h"
+	<iostream>
+	<conio.h>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1646912469 source:c:\users\usuario\desktop\practica_0\src\matriz.cpp
+	"matriz.h"
+	<iostream>
+	<conio.h>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1646912469 source:c:\users\usuario\desktop\practica_0\src\quebrado.cpp
+	"quebrado.h"
+	<iostream>
+	<conio.h>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

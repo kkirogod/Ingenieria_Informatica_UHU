@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1653563042 source:h:\uhu\e.datos\practica_2\practica2\main.cpp
+	<iostream>
+	<string>
+	"CriptoDoc.h"
+	"pila.h"
+
+1652352156 source:h:\uhu\e.datos\practica_2\practica2\src\lista.cpp
+	"lista.h"
+
+1651746258 h:\uhu\e.datos\practica_2\practica2\include\lista.h
+	<iostream>
+
+1653559338 source:h:\uhu\e.datos\practica_2\practica2\src\criptodoc.cpp
+	"CriptoDoc.h"
+
+1653558630 h:\uhu\e.datos\practica_2\practica2\include\criptodoc.h
+	"lista.h"
+	<iostream>
+	<cstring>
+	<fstream>
+	<string>
+
+1652955462 source:h:\uhu\e.datos\practica_2\practica2\src\pila.cpp
+	"pila.h"
+
+1652955450 h:\uhu\e.datos\practica_2\practica2\include\pila.h
+	<iostream>
+
+1653559338 source:e:\uhu\año1\e.datos\practica_2\practica2\src\criptodoc.cpp
+	"CriptoDoc.h"
+
+1653558630 e:\uhu\año1\e.datos\practica_2\practica2\include\criptodoc.h
+	"lista.h"
+	<iostream>
+	<cstring>
+	<fstream>
+	<string>
+
+1651746258 e:\uhu\año1\e.datos\practica_2\practica2\include\lista.h
+	<iostream>
+
+1652352156 source:e:\uhu\año1\e.datos\practica_2\practica2\src\lista.cpp
+	"lista.h"
+
+1652955462 source:e:\uhu\año1\e.datos\practica_2\practica2\src\pila.cpp
+	"pila.h"
+
+1652955450 e:\uhu\año1\e.datos\practica_2\practica2\include\pila.h
+	<iostream>
+
