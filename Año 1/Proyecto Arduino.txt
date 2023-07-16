@@ -1,0 +1,82 @@
+const int START = 2; //pin pulsador start
+const int STOP = 3; //pin pulsador stop
+int i;
+
+volatile boolean ON = false; //indica si hay que mostrar el nombre
+
+//PINES DISPLAY:
+//4-A, 5-B, 6-C, 7-D, 8-E, 9-F, 10-G
+
+byte miguel[7][7]=
+{
+  {1,1,1,0,1,1,0}, //M
+  {1,1,1,0,1,1,0},
+  {0,0,0,0,1,1,0}, //I
+  {1,1,1,1,0,1,1}, //G
+  {0,1,1,1,1,1,0}, //U
+  {1,0,0,1,1,1,1}, //E
+  {0,0,0,1,1,1,0}, //L
+};
+
+void setup()
+{  
+  pinMode(START, INPUT_PULLUP);
+  pinMode(STOP, INPUT_PULLUP);
+ 
+  //INTERRUPCIONES:
+  attachInterrupt(digitalPinToInterrupt(START), empezar, FALLING);
+  attachInterrupt(digitalPinToInterrupt(STOP), parar, FALLING);
+ 
+  for(int i=4; i<11; i++)
+  {
+    pinMode(i, OUTPUT);
+  }
+}
+
+
+void loop()
+{
+  if(!ON)
+  {
+    for(int j=0; j<7; j++)
+    {
+      digitalWrite(j+4, LOW);
+    }
+  }
+  else
+  {
+    i = 0;
+   
+    while(i<7 && ON) //cada ciclo es un caracter
+    {
+      for(int j=0; j<7; j++)
+      {
+        if(miguel[i][j] == 1)
+        {
+          digitalWrite(j+4, HIGH);
+        }
+      }
+      delay(2000); //2 seg de pausa (se ve el caracter)
+     
+      for(int j=0; j<7; j++) //quitamos el caracter
+      {
+        digitalWrite(j+4, LOW);
+      }
+      delay(500); //0.5 seg de pausa (NO se ve el caracter)
+     
+      i++;
+    }
+  }
+}
+   
+
+void empezar()
+{
+  ON = true;
+}
+           
+ 
+void parar()
+{
+  ON = false;
+}
