@@ -1,0 +1,2 @@
+%EJERCICIO 3
+rref(A)
