@@ -1,0 +1,9 @@
+En Linux todos los procesos tienen un padre, cuando un proceso padre muere todos sus hijos son ahora los hijos del padre de su padre, 
+si el proceso A muere antes de que el proceso B acabe, B será hijo del padre de A 
+y el padre de A es el escritorio de gnome -> EL ESCRITORIO PETA
+
+SOLUCION -> GUARDAR AL PRINCIPIO DE UN PROCESO EL PID DEL PADRE Y USAR ESA VARIABLE EN VEZ DE GETPPID().
+
+
+
+USAR LAS SEÑALES 10 Y 12 (son para el usuario)

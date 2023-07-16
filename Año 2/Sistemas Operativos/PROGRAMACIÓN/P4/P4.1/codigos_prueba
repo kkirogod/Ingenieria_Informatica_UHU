@@ -1,0 +1,80 @@
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main()
+{
+    int vpid, retorno, elhijo;
+
+    printf("Hola, soy el padre %d y creo a mi hijo\n", getpid());
+
+    vpid = fork();
+
+    if (vpid == 0)
+    {
+        execl("hijo", "hijo", NULL);
+        perror("no se puede ejecutar otro\n");
+        exit(-1);
+    }
+    else if (vpid == -1)
+        printf("Imposible hacer el fork\n");
+
+    printf("El hijo %d esta creado y espero a que termine\n", vpid);
+
+    elhijo = wait(&retorno);
+
+    if (WIFEXITED(retorno))
+    { // El hijo devuelve un valor
+        printf("El valor devuelto vale %d\n", WEXITSTATUS(retorno));
+    }
+    else
+    {
+        if (WIFSIGNALED(retorno))
+        { // Lo mata una señal
+            printf("Lo mata la señal %d\n", WTERMSIG(retorno));
+        }
+        else
+        {
+            printf("Ha terminado de forma extraña \n");
+        }
+    }
+
+    printf("Termina el padre y ya termino el hijo %d\n", elhijo);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <signal.h>
+#include <unistd.h>
+
+int seguir = 1;
+
+void fin()
+{
+    seguir = 0;
+}
+
+int main()
+{
+    int contador = 0;
+
+    signal(SIGALRM, fin);
+
+    alarm(5);
+
+    do
+    {
+        printf("Esta es la línea % d\n", contador++);
+    }
+    while(seguir);
+
+    printf("TOTAL: % d líneas\n", contador);
+
+    return 0;
+}
