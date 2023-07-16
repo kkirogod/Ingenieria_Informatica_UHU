@@ -1,0 +1,7 @@
+V3 3
+FL "D:/UHU/FC/Practica 6 FC/Practica_6.vhd" 2021/12/19.15:02:54 P.20131013
+EN work/Practica_6 1639998376 FL "D:/UHU/FC/Practica 6 FC/Practica_6.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Practica_6/Behavioral 1639998377 \
+      FL "D:/UHU/FC/Practica 6 FC/Practica_6.vhd" EN work/Practica_6 1639998376

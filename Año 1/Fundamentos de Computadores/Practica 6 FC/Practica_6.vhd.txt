@@ -1,0 +1,496 @@
+*************************************
+* Xilinx XInfo System Information Report
+* XInfo log file started on: 2021/12/19 15:08:01
+*************************************
+
+
+*************************************
+* System Information:
+*************************************
+Hostname: DESKTOP-RU2UL22
+Network Interface Card ID: 2cf05d6b3e32,0a002700000a,00ffb01283b0,e0d4e8723503,e0d4e8723504,e2d4e8723503
+C: Drive Serial Number: 22a92530
+FLEXID Dongle ID: 
+Architecture: AMD64
+Platform: Windows NT
+Operating System: Windows 10 Pro
+Version: 6.3
+Current Build Number: 19042
+Service Level: Not Success
+Product ID: 00330-80000-00000-AA246
+Registered Organization: 
+Registered Owner: miguelquirogacampos@gmail.com
+System Root: C:\Windows
+Architecture: AMD 64-bit based
+Processor Type: 64-bit Class
+Processor Speed: ~2895 MHz
+Processor Detail: Vendor: AuthenticAMD - Family: 0 - Model: 0 - Stepping: 0
+Processor Count: 16
+Current User Name: migue
+Current User Permission: Administrator
+Available space on drive C:\ (HD - NTFS): 104.97 GB of 476.32 GB
+Physical Memory: 16149748 KB
+Available Physical Memory: 10573876 KB
+Swap File: 18640116 KB
+Available Swap File: 9054004 KB
+Total Virtual: -128 KB
+Available Virtual: -4378204 KB
+: 
+: 
+: 
+
+*************************************
+* Software Environment:
+*************************************
+Default Web Browser: Not found: Software\Classes\htmlfile\shell\open\command
+ALLUSERSPROFILE: C:\ProgramData
+APPDATA: C:\Users\migue\AppData\Roaming
+CommonProgramFiles: C:\Program Files\Common Files
+CommonProgramFiles(x86): C:\Program Files (x86)\Common Files
+CommonProgramW6432: C:\Program Files\Common Files
+COMPUTERNAME: DESKTOP-RU2UL22
+ComSpec: C:\Windows\system32\cmd.exe
+DriverData: C:\Windows\System32\Drivers\DriverData
+HOMEDRIVE: C:
+HOMEPATH: \Users\migue
+LOCALAPPDATA: C:\Users\migue\AppData\Local
+LOGONSERVER: \\DESKTOP-RU2UL22
+NO_XILINX_DATA_LICENSE: HIDDEN
+NUMBER_OF_PROCESSORS: 16
+OneDrive: C:\Users\migue\OneDrive
+OS: Windows_NT
+Path: C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\\lib\nt64;C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\\bin\nt64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\migue\AppData\Local\Microsoft\WindowsApps;C:\Program Files\CodeBlocks\MinGW\bin
+PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE: AMD64
+PROCESSOR_IDENTIFIER: AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
+PROCESSOR_LEVEL: 23
+PROCESSOR_REVISION: 6001
+ProgramData: C:\ProgramData
+ProgramFiles: C:\Program Files
+ProgramFiles(x86): C:\Program Files (x86)
+ProgramW6432: C:\Program Files
+PSModulePath: C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC: C:\Users\Public
+SESSIONNAME: Console
+SystemDrive: C:
+SystemRoot: C:\Windows
+TEMP: C:\Users\migue\AppData\Local\Temp
+TMP: C:\Users\migue\AppData\Local\Temp
+USERDOMAIN: DESKTOP-RU2UL22
+USERDOMAIN_ROAMINGPROFILE: DESKTOP-RU2UL22
+USERNAME: migue
+USERPROFILE: C:\Users\migue
+VBOX_HWVIRTEX_IGNORE_SVM_IN_USE: 1
+VBOX_MSI_INSTALL_PATH: C:\Program Files\Oracle\VirtualBox\
+windir: C:\Windows
+XILINX: C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\
+XILINXD_LICENSE_FILE: C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic
+
+*************************************
+* fileset.txt(s):
+*************************************
+
+*************************************
+* install.log(s):
+*************************************
+
+*************************************
+* Software Updates:
+*************************************
+No Updates to Display 
+
+*************************************
+* Tactical Patches:
+*************************************
+No Tactical Patches to Display 
+
+*************************************
+* ISE Preferences:
+*************************************
+ISE version 14.7 preferences 
+================================== 
+ModelSimBinDirUserVal 
+ModelSimExePathUserVal 
+SynplifyBinDirUserVal 
+SynplifyExePathUserVal 
+SynplifyProBinDirUserVal 
+SynplifyProExePathUserVal 
+PrecisionBinDirUserVal 
+PrecisionExePathUserVal 
+PlanAheadBinDirUserVal C:\Xilinx_14.7\14.7\ISE_DS\PlanAhead\bin
+PlanAheadExePathUserVal C:\Xilinx_14.7\14.7\ISE_DS\PlanAhead\bin\planAhead.bat
+FitterReportFormat 0
+DebugTclScriptDebugLevel 0
+Project Editor 0
+ConstEditor 2
+Custom CmdLine 
+DefaultTopLevelModuleType HDL
+DefaultSynthesisTool XST (VHDL/Verilog)
+DefaultSimulator ISim (VHDL/Verilog)
+DefaultPreferredLanguage Verilog
+DefaultPropertySpecificationProjectFile Store all values
+DefaultManualCompileOrder false
+DefaultEnableMessageFiltering false
+ 
+
+*************************************
+* License Information:
+*************************************
+Feature            S/W or IP Core Version Expiring  Floating or Node Locked Count     Info                                                                            Server Name File Name                                                                Host Id Feature Index License Validity Licenses In Use Host Id Matches 
+================== ============== ======= ========= ======================= ========= =============================================================================== =========== ======================================================================== ======= ============= ================ =============== =============== 
+ISE_WebPACK        S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00001         Okay                             Yes             
+SDK                S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00002         Okay                             Yes             
+WebPACK            S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00003         Okay                             Yes             
+XC7Z010            S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00004         Okay                             Yes             
+XC7Z030            S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00005         Okay                             Yes             
+xps_tdp            S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00006         Okay                             Yes             
+XC7Z020            S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00007         Okay                             Yes             
+PlanAhead          S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00008         Okay                             Yes             
+ChipscopePro       S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00009         Okay                             Yes             
+ChipScopePro_SIOTK S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00010         Okay                             Yes             
+HLS                S/W            2022.11 Permanent Nodelocked              Uncounted miguelquirogacampos@gmail.com,ISE_WebPACK,software,permanent,_212343801_0_0_452             C:\Users\migue\OneDrive\Desktop\Xilinx_ISE_DS_Win_14.7_1015_1\Xilinx.lic ANY     00011         Okay                             Yes             
+                                                                                      No License Available                                                                        C:/.Xilinx                                                                       00012                                                          
+
+*************************************
+* The version of system dlls called by Xilinx software: 
+*************************************
+File Name:     ADVAPI32.dll
+Dll Version:   6.02.19041.1052
+File Size:     689552
+Create Time:   Wed Jun 09 10:08:29 2021
+Access Time:   Sun Dec 19 11:48:06 2021
+Modified Time: Wed Jun 09 10:08:29 2021
+File Path: C:\Windows\System32\ADVAPI32.dll
+
+File Name:     COMCTL32.dll
+Dll Version:   5.82.19041.1110
+File Size:     702792
+Create Time:   Wed Jul 14 19:42:40 2021
+Access Time:   Sun Dec 19 14:37:09 2021
+Modified Time: Fri Jul 09 13:18:04 2021
+File Path: C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.1110_none_792d1c772443f647\COMCTL32.dll
+
+File Name:     comdlg32.dll
+Dll Version:   6.02.19041.906
+File Size:     857600
+Create Time:   Fri Apr 16 21:17:30 2021
+Access Time:   Sun Dec 19 12:27:36 2021
+Modified Time: Fri Apr 16 21:17:30 2021
+File Path: C:\Windows\System32\COMDLG32.dll
+
+File Name:     CRYPT32.dll
+Dll Version:   6.02.19041.1320
+File Size:     1383152
+Create Time:   Wed Nov 10 17:35:56 2021
+Access Time:   Sun Dec 19 11:48:06 2021
+Modified Time: Wed Nov 10 17:35:56 2021
+File Path: C:\Windows\System32\CRYPT32.dll
+
+File Name:     dbghelp.dll
+Dll Version:   6.02.19041.867
+File Size:     1866240
+Create Time:   Fri Mar 12 18:01:57 2021
+Access Time:   Sun Dec 19 14:55:08 2021
+Modified Time: Fri Mar 12 18:01:57 2021
+File Path: C:\Windows\system32\dbghelp.dll
+
+File Name:     DCIMAN32.dll
+Dll Version:   6.02.19041.1387
+File Size:     14848
+Create Time:   Wed Dec 15 12:22:36 2021
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Wed Dec 15 12:22:36 2021
+File Path: C:\Windows\system32\DCIMAN32.dll
+
+File Name:     DDRAW.dll
+Dll Version:   6.02.19041.01
+File Size:     592384
+Create Time:   Sat Dec 07 10:08:52 2019
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Sat Dec 07 10:08:52 2019
+File Path: C:\Windows\system32\DDRAW.dll
+
+File Name:     GDI32.dll
+Dll Version:   6.02.19041.1202
+File Size:     166312
+Create Time:   Wed Sep 15 10:24:37 2021
+Access Time:   Sun Dec 19 11:48:06 2021
+Modified Time: Wed Sep 15 10:24:37 2021
+File Path: C:\Windows\System32\GDI32.dll
+
+File Name:     GLU32.dll
+Dll Version:   6.02.19041.1081
+File Size:     164352
+Create Time:   Wed Jul 07 17:32:13 2021
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Wed Jul 07 17:32:13 2021
+File Path: C:\Windows\system32\GLU32.dll
+
+File Name:     IMM32.DLL
+Dll Version:   6.02.19041.546
+File Size:     185448
+Create Time:   Thu Nov 19 03:49:25 2020
+Access Time:   Sun Dec 19 14:45:11 2021
+Modified Time: Thu Nov 19 03:49:25 2020
+File Path: C:\Windows\System32\IMM32.dll
+
+File Name:     KERNEL32.dll
+Dll Version:   6.02.19041.1348
+File Size:     770136
+Create Time:   Wed Nov 10 17:35:40 2021
+Access Time:   Sun Dec 19 11:48:06 2021
+Modified Time: Wed Nov 10 17:35:40 2021
+File Path: C:\Windows\System32\KERNEL32.DLL
+
+File Name:     LZ32.dll
+Dll Version:   5.00.01.01
+File Size:     3072
+Create Time:   Sat Dec 07 10:08:52 2019
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Sat Dec 07 10:08:52 2019
+File Path: C:\Windows\system32\LZ32.dll
+
+File Name:     MFC42.DLL
+Dll Version:   6.06.8063.00
+File Size:     1456640
+Create Time:   Thu Nov 19 03:48:52 2020
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Thu Nov 19 03:48:52 2020
+File Path: C:\Windows\system32\MFC42.DLL
+
+File Name:     MPR.dll
+Dll Version:   6.02.19041.546
+File Size:     109504
+Create Time:   Thu Nov 19 03:49:24 2020
+Access Time:   Sun Dec 19 14:18:42 2021
+Modified Time: Thu Nov 19 03:49:24 2020
+File Path: C:\Windows\SYSTEM32\MPR.dll
+
+File Name:     MSASN1.dll
+Dll Version:   6.02.19041.546
+File Size:     64072
+Create Time:   Thu Nov 19 03:49:22 2020
+Access Time:   Sun Dec 19 14:45:23 2021
+Modified Time: Thu Nov 19 03:49:22 2020
+File Path: C:\Windows\SYSTEM32\MSASN1.dll
+
+File Name:     MSVCIRT.dll
+Dll Version:   7.00.19041.01
+File Size:     83968
+Create Time:   Sat Dec 07 10:08:19 2019
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Sat Dec 07 10:08:19 2019
+File Path: C:\Windows\system32\MSVCIRT.dll
+
+File Name:     MSVCP80.DLL
+Dll Version:   Can't find the specified dll.
+File Size:     
+Create Time:   Access Time:   Modified Time: File Path: 
+
+File Name:     MSVCR71.dll
+Dll Version:   Can't find the specified dll.
+File Size:     
+Create Time:   Access Time:   Modified Time: File Path: 
+
+File Name:     MSVCR80.DLL
+Dll Version:   Can't find the specified dll.
+File Size:     
+Create Time:   Access Time:   Modified Time: File Path: 
+
+File Name:     MSVCRT.dll
+Dll Version:   7.00.19041.546
+File Size:     637360
+Create Time:   Thu Nov 19 03:49:23 2020
+Access Time:   Sun Dec 19 11:48:06 2021
+Modified Time: Thu Nov 19 03:49:23 2020
+File Path: C:\Windows\System32\msvcrt.dll
+
+File Name:     NETAPI32.dll
+Dll Version:   6.02.19041.546
+File Size:     82176
+Create Time:   Thu Nov 19 03:49:13 2020
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Thu Nov 19 03:49:13 2020
+File Path: C:\Windows\SYSTEM32\NETAPI32.dll
+
+File Name:     NETRAP.dll
+Dll Version:   Can't find the specified dll.
+File Size:     
+Create Time:   Access Time:   Modified Time: File Path: 
+
+File Name:     ntdll.dll
+Dll Version:   6.02.19041.1288
+File Size:     2024736
+Create Time:   Wed Oct 13 12:03:42 2021
+Access Time:   Sun Dec 19 11:48:19 2021
+Modified Time: Wed Oct 13 12:03:42 2021
+File Path: C:\Windows\SYSTEM32\ntdll.dll
+
+File Name:     ole32.dll
+Dll Version:   6.02.19041.1202
+File Size:     1214264
+Create Time:   Wed Sep 15 10:24:47 2021
+Access Time:   Sun Dec 19 14:45:23 2021
+Modified Time: Wed Sep 15 10:24:47 2021
+File Path: C:\Windows\System32\ole32.dll
+
+File Name:     OLEAUT32.dll
+Dll Version:   6.02.19041.985
+File Size:     831544
+Create Time:   Wed May 12 19:00:15 2021
+Access Time:   Sun Dec 19 14:18:00 2021
+Modified Time: Wed May 12 19:00:15 2021
+File Path: C:\Windows\System32\OLEAUT32.dll
+
+File Name:     oledlg.dll
+Dll Version:   6.02.19041.746
+File Size:     210432
+Create Time:   Wed Jan 13 19:14:19 2021
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Wed Jan 13 19:14:19 2021
+File Path: C:\Windows\system32\oledlg.dll
+
+File Name:     OPENGL32.dll
+Dll Version:   6.02.19041.1081
+File Size:     1062400
+Create Time:   Wed Jul 07 17:32:13 2021
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Wed Jul 07 17:32:13 2021
+File Path: C:\Windows\system32\OPENGL32.dll
+
+File Name:     RPCRT4.dll
+Dll Version:   6.02.19041.1288
+File Size:     1215376
+Create Time:   Wed Oct 13 12:03:43 2021
+Access Time:   Sun Dec 19 11:48:06 2021
+Modified Time: Wed Oct 13 12:03:43 2021
+File Path: C:\Windows\System32\RPCRT4.dll
+
+File Name:     SAMLIB.dll
+Dll Version:   6.02.19041.1348
+File Size:     137728
+Create Time:   Wed Nov 10 17:35:56 2021
+Access Time:   Sun Dec 19 14:45:23 2021
+Modified Time: Wed Nov 10 17:35:56 2021
+File Path: C:\Windows\system32\SAMLIB.dll
+
+File Name:     SECUR32.DLL
+Dll Version:   6.02.19041.546
+File Size:     28672
+Create Time:   Thu Nov 19 03:49:30 2020
+Access Time:   Sun Dec 19 14:45:11 2021
+Modified Time: Thu Nov 19 03:49:30 2020
+File Path: C:\Windows\system32\SECUR32.DLL
+
+File Name:     SETUPAPI.dll
+Dll Version:   6.02.19041.1237
+File Size:     4687256
+Create Time:   Wed Sep 15 10:24:53 2021
+Access Time:   Sun Dec 19 15:08:00 2021
+Modified Time: Wed Sep 15 10:24:53 2021
+File Path: C:\Windows\system32\SETUPAPI.dll
+
+File Name:     SHELL32.dll
+Dll Version:   6.02.19041.1387
+File Size:     7647808
+Create Time:   Wed Dec 15 12:22:41 2021
+Access Time:   Sun Dec 19 14:17:35 2021
+Modified Time: Wed Dec 15 12:22:41 2021
+File Path: C:\Windows\System32\SHELL32.dll
+
+File Name:     SHLWAPI.DLL
+Dll Version:   6.02.19041.1023
+File Size:     342416
+Create Time:   Wed Jun 09 10:08:48 2021
+Access Time:   Sun Dec 19 11:48:07 2021
+Modified Time: Wed Jun 09 10:08:48 2021
+File Path: C:\Windows\System32\SHLWAPI.dll
+
+File Name:     SNMPAPI.DLL
+Dll Version:   6.02.19041.01
+File Size:     33792
+Create Time:   Sat Dec 07 10:09:34 2019
+Access Time:   Sun Dec 19 14:37:10 2021
+Modified Time: Sat Dec 07 10:09:34 2019
+File Path: C:\Windows\SYSTEM32\snmpapi.dll
+
+File Name:     urlmon.dll
+Dll Version:   11.00.19041.1320
+File Size:     1945600
+Create Time:   Wed Nov 10 17:35:58 2021
+Access Time:   Sun Dec 19 14:18:00 2021
+Modified Time: Wed Nov 10 17:35:58 2021
+File Path: C:\Windows\system32\urlmon.dll
+
+File Name:     USER32.dll
+Dll Version:   6.02.19041.1202
+File Size:     1708056
+Create Time:   Wed Sep 15 10:24:39 2021
+Access Time:   Sun Dec 19 11:48:06 2021
+Modified Time: Wed Sep 15 10:24:39 2021
+File Path: C:\Windows\System32\USER32.dll
+
+File Name:     VERSION.dll
+Dll Version:   6.02.19041.546
+File Size:     31496
+Create Time:   Thu Nov 19 03:49:32 2020
+Access Time:   Sun Dec 19 14:45:11 2021
+Modified Time: Thu Nov 19 03:49:32 2020
+File Path: C:\Windows\SYSTEM32\VERSION.dll
+
+File Name:     WINHTTP.dll
+Dll Version:   6.02.19041.1320
+File Size:     1092416
+Create Time:   Wed Nov 10 17:35:56 2021
+Access Time:   Sun Dec 19 14:45:23 2021
+Modified Time: Wed Nov 10 17:35:56 2021
+File Path: C:\Windows\system32\WINHTTP.dll
+
+File Name:     WININET.dll
+Dll Version:   11.00.19041.1320
+File Size:     5045248
+Create Time:   Wed Nov 10 17:35:58 2021
+Access Time:   Sun Dec 19 14:45:11 2021
+Modified Time: Wed Nov 10 17:35:58 2021
+File Path: C:\Windows\system32\WININET.dll
+
+File Name:     WINMM.DLL
+Dll Version:   6.02.19041.546
+File Size:     147200
+Create Time:   Thu Nov 19 03:48:48 2020
+Access Time:   Sun Dec 19 15:03:01 2021
+Modified Time: Thu Nov 19 03:48:48 2020
+File Path: C:\Windows\SYSTEM32\WINMM.dll
+
+File Name:     WINSPOOL.DRV
+Dll Version:   6.02.19041.1288
+File Size:     593920
+Create Time:   Wed Oct 13 12:03:10 2021
+Access Time:   Sun Dec 19 15:03:01 2021
+Modified Time: Wed Oct 13 12:03:10 2021
+File Path: C:\Windows\SYSTEM32\WINSPOOL.DRV
+
+File Name:     WS2HELP.dll
+Dll Version:   6.02.19041.01
+File Size:     4608
+Create Time:   Sat Dec 07 10:08:41 2019
+Access Time:   Sun Dec 19 15:08:01 2021
+Modified Time: Sat Dec 07 10:08:41 2019
+File Path: C:\Windows\system32\WS2HELP.dll
+
+File Name:     WS2_32.dll
+Dll Version:   6.02.19041.546
+File Size:     427200
+Create Time:   Thu Nov 19 03:49:24 2020
+Access Time:   Sun Dec 19 11:48:07 2021
+Modified Time: Thu Nov 19 03:49:24 2020
+File Path: C:\Windows\System32\WS2_32.dll
+
+File Name:     WSOCK32.dll
+Dll Version:   6.02.19041.01
+File Size:     18944
+Create Time:   Sat Dec 07 10:08:41 2019
+Access Time:   Sun Dec 19 14:18:42 2021
+Modified Time: Sat Dec 07 10:08:41 2019
+File Path: C:\Windows\SYSTEM32\WSOCK32.dll
+
