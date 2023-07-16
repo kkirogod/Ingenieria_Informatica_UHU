@@ -1,0 +1,58 @@
+Práctica 1.1
+
+6)
+
+cd / 
+cat ./home/miguel.quiroga/prac1/p1.txt
+cd ./home/miguel.quiroga/prac1/prac11/prac13/
+cat ../../p1.txt
+
+7)
+
+joe /home/miguel.quiroga/prac1/prac11/prac13/prueba13
+joe ../prac12/prueba12
+
+8)
+
+cat ../../prac11/ejemplo01
+
+9)
+
+cp ../prac12/prueba12 ../prac13/prueba13 ../
+
+10)
+
+cp ../prac12/prueba12 ../prac14/prueba14
+
+11)
+
+mkdir ../prac12/temp1 ../prac12/temp2
+
+12)
+
+cd ../../
+mv ./prac11/prac13/prueba13 ./prac11/prac12/temp1/
+cp ./prac11/prac12/prueba12 ./prac11/prac14/prueba14 ./prac11/prac12/temp1/
+
+13)
+
+cp ./prac11/prac12/temp1/p*1[1-5] ./prac11/prac12/temp2/
+
+14)
+
+rm /home/miguel.quiroga/prac1/prac11/prac12/temp1/*[0-9]?
+
+15)
+
+rmdir /home/miguel.quiroga/prac1/prac11/prac12/temp1
+rm -r ./prac11/prac12/temp2/
+
+16)
+
+cd ~
+
+17)
+
+mv p1.txt solp1.txt
+
+

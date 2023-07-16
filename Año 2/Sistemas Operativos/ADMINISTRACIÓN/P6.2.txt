@@ -1,0 +1,232 @@
+2) 
+
+mkdir ModuloI/Practica6/
+
+cd ModuloI/Practica6/
+
+3)
+
+joe miron
+{
+#!/bin/bash
+
+if [ $# -eq 1 ]
+then
+        echo "ERROR: Se debe pasar un parámetro"
+else
+        if [ -d $1 ]
+        then
+                ls -la $1 2> /dev/null
+
+        elif [ -L $1 ]
+        then
+                find / -type l -name $1 -printf "%l\n" 2> /dev/null
+                cat $1
+
+        elif [ -f $1 ]
+        then
+                more $1
+
+        else
+                echo "ERROR. Valor del parámetro: $1"
+
+        fi
+fi
+}
+
+4)
+
+joe nprimeros.sh
+{
+#!/bin/bash
+
+if [ -d $1 ]
+then
+        NUM=1
+
+        for i in $(ls -1 $1)
+        do
+                if [ $NUM -le $2 ]
+                then
+                        echo "El nombre del fichero $NUM es $i"
+                        NUM=$(($NUM + 1))
+                else
+                        break
+                fi
+        done
+else
+        echo "ERROR: El 1er parámetro debe ser un directorio"
+fi
+}
+
+5)
+
+mkdir largos cortos
+
+6)
+
+joe selector.sh
+{
+#!/bin/bash
+
+for i in $*
+do
+        if [ -f $i ]
+        then
+                case $i in
+                ??????*) cp $i /home/miguel.quiroga/ModuloI/Practica6/largos
+                ;;
+                *) cp $i /home/miguel.quiroga/ModuloI/Practica6/cortos
+                ;;
+                esac
+        fi
+
+done
+}
+
+7)
+
+#!/bin/bash
+
+if [ $# -ne 1 ]
+        echo "Se debe pasar 1 parámetro"
+else
+        echo "Introduce un numero por teclado entre 2 y 9: "
+        read NUM
+
+        if [ $NUM -ge 10 ]
+                NUM=9
+
+        elif [ $NUM -le 1 ]
+                NUM=2
+
+        fi
+
+        RUTA=./$1
+
+        while [ $NUM -ge 1 ]
+        do
+                mkdir $RUTA
+                RUTA=$RUTA/$1
+                NUM=$(($NUM - 1))
+        done
+fi
+
+8)
+
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+        while true
+        do
+                ls ./
+                sleep 1
+        done
+
+elif [ -d $1 ]
+then
+        while true
+        do
+                ls $1
+                sleep 1
+        done
+else
+        echo "ERROR: El parámetro pasado no se corresponde con un directorio válido"
+fi
+
+9)
+
+#!/bin/bash
+
+if [ $# -ne 2 ]
+then
+        echo "Número de parámetros incorrecto, se esperaban 2"
+        exit 11
+
+elif [ -d $1 ] && [ -d $2 ]
+then
+        echo "Introduce un carácter o número: "
+        read tecla
+
+        num=0
+
+        for i in $(find $1 -maxdepth 1 -type f -name "$tecla*") ######## SIEMPRE -maxdepth EL PRIMERO #############
+        do
+                echo "$i"
+
+                tail -n 3 $i
+
+                echo "Quiere moverlo? "
+                read resp
+
+                case $resp in
+                        s*)     mv $i $2
+                                num=$(($num + 1));;
+                        *)
+                esac
+        done
+
+        echo "Cantidad de ficheros movidos: $num"
+else
+        echo "Los parámetros deben ser directorios válidos"
+        exit 21
+fi
+
+10)
+
+#!/bin/bash
+
+case $1 in
+        for)    for i in {1..10} ############IMPORTANTE###########
+                do
+                        if [ $i -eq 6 ]
+                        then
+                                continue
+
+                        elif [ $i -eq 9 ]
+                        then
+                                break
+                        fi
+
+                        echo $i
+                done
+        ;;
+        while)  i=1
+                while [ $i -le 10 ]
+                do
+                        if [ $i -eq 6 ]
+                        then
+                                i=$(($i+1))
+                                continue
+
+                        elif [ $i -eq 9 ]
+                        then
+                                break
+                        fi
+
+                        echo $i
+
+                        i=$((i+1))
+                done
+        ;;
+        until)  i=1
+                until [ $i -gt 10 ]
+                do
+                        if [ $i -eq 6 ]
+                        then
+                                i=$(($i+1))
+                                continue
+
+                        elif [ $i -eq 9 ]
+                        then
+                                break
+                        fi
+
+                        echo $i
+
+                        i=$((i+1))
+                done
+        ;;
+esac
+

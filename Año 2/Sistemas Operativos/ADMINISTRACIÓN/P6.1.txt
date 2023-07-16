@@ -1,0 +1,165 @@
+1)
+
+mkdir -p prac6/prac6 prac6/fuentes/tmp1 prac6/fuentes/tmp2 prac6/guiones
+
+2)
+
+joe .profile
+{
+GUION="/home/miguel.quiroga/prac6/guiones/"
+export GUION
+}
+
+. .profile
+
+cp $(find ~ -type f -name "*.txt") prac6/fuentes/tmp1/
+
+3)
+
+cd $GUION
+
+joe tratafichero
+{
+#!/bin/bash
+
+if [ -f $1 ]
+then
+        more $1
+
+elif [ -d $1 ]
+then
+        ls -la $1
+
+else
+        echo "$1"
+
+fi
+}
+
+4)
+
+cd ../prac6/
+
+chmod a+x ../guiones/tratafichero
+
+../guiones/tratafichero $HOME/prac2/f1.txt
+
+../guiones/tratafichero $GUION
+
+5)
+
+cd $GUION
+
+joe fpfinal
+{
+#!/bin/bash
+
+if [ $# -lt 3 ]
+then
+        echo "Se necesitan al menos 3 parámetros"
+
+else
+        if [ -d $1 ] && [ -d $3 ]
+        then
+                find $1 -type l -name $2 -printf "%f\n" 2>/dev/null > $3/enlaces.txt
+
+        else
+                echo "El primer y tercer parámetro han de ser directorios"
+
+        fi
+fi
+}
+
+chmod a+x fpfinal
+
+./fpfinal /home "[A-Z]*" /home/miguel.quiroga/prac6/fuentes/
+
+6)
+
+joe mtam
+{
+#!/bin/bash
+
+if [ $# -ne 2 ]
+then
+        echo "El nº de parámetros debe ser 2"
+
+else
+        for i in $(find $1 -type f -name $2 -printf "%s\n")
+        do
+                echo $i
+
+        done
+fi
+}
+
+chmod a+x mtam
+
+./mtam /home/miguel.quiroga/prac6/fuentes/ "s*.*"
+
+7)
+
+joe anida
+{
+#!/bin/bash
+
+echo "Introduce un número: "
+read NUM
+
+RUTA=./$1
+
+while [ $NUM -ge 1 ]
+do
+        mkdir $RUTA
+        RUTA=$RUTA/$1
+        NUM=$(($NUM - 1))
+
+done
+}
+
+chmod a+x anida
+
+cd ../fuentes/tmp2/
+
+../../guiones/anida p6
+
+8)
+
+cd ../../guiones/
+
+joe opcion
+{
+#!/bin/bash
+
+while true
+do
+
+        echo "Introduce una palabra: "
+        read PAL
+
+        case $PAL in
+
+                [0-9]*) 
+		echo $PAL >> ./numero
+                ;;
+                [aAeEiIoOuU]*) 
+		echo $PAL >> ./vocal
+                ;;
+                .) 
+		break
+                ;;
+                *)
+		echo $PAL >> ./otro
+                ;;
+
+        esac
+done
+}
+
+9)
+
+chmod 641 ../fuentes/tmp1/ ../fuentes/tmp2/
+
+10)
+
+ps h | wc -l

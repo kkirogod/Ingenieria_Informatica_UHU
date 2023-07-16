@@ -1,0 +1,107 @@
+PRÁCTICA 2.2
+
+1)
+
+echo Practica 2: Manejo de Shell – Inicio…
+
+2)
+
+cd ~/ModuloI/Practica1/
+
+3)
+
+mkdir ../Practica2
+
+4)
+
+chmod 700 ../Practica2/
+
+5)
+
+cd ../Practica2
+cat >solucion2
+
+6)
+
+cd /home/miguel.quiroga/ModuloI/Practica2/
+
+7)
+
+find /var/ -type d -name *data*
+
+8)
+
+find /etc/ -type f -mtime -100
+
+9)
+
+cp /etc/passwd /etc/group .
+
+10)
+
+grep miguel.quiroga passwd group
+
+11)
+
+wc -c group
+
+12)
+
+wc -L passwd
+
+13)
+
+sort -r group
+
+14)
+
+head -n 3 passwd
+
+15)
+
+tail -n 3 passwd
+
+16)
+
+ln -s ./ModuloI/Practica1/Datos/fichcancion versos
+
+17)
+
+grep ^Cobi versos
+
+18)
+
+who -H
+
+19)
+
+id -g
+
+20)
+
+cal Enero 2022
+
+21)
+
+date +'Año: %Y, Mes: %m, Dia: %d'
+
+22)
+
+tty
+
+23)
+
+top
+
+25)
+
+ps -u
+kill 44342
+
+27)
+
+mesg n
+
+28)
+
+echo Práctica 2: Manejo de Shell… Finalizada

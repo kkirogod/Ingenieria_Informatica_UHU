@@ -1,0 +1,105 @@
+1)
+
+mkdir -p /home/miguel.quiroga/prac5/prac51 /home/miguel.quiroga/prac5/prac52 /home/miguel.quiroga/prac5/guiones
+
+2)
+
+joe .profile
+PATH=$PATH:/home/miguel.quiroga/prac5/guiones/
+(Ctrl+K+X)
+. .profile
+echo $PATH
+
+3)
+
+cd prac5/guiones/
+
+joe busca
+{
+#!/bin/bash
+
+find $1 -type f -mtime -$2
+}
+
+cd
+chmod a+x ./prac5/guiones/busca
+./prac5/guiones/busca ~ 10
+
+4)
+
+joe .profile
+alias listaf='ls -R -a -l'
+alias gente='who | wc -l'
+alias saludo='date +"Hola. Son las %H horas y %M minutos del %A %d de %B de %Y. Chao."'
+. .profile
+
+5)
+
+joe prac5/guiones/fnuevos
+{
+#!/bin/bash
+
+find $2 -type f -newer $1 | wc -l
+}
+
+joe prac5/guiones/fviejos
+{
+#!/bin/bash
+
+find $2 -type f -not -newer $1 | wc -l
+}
+
+6)
+
+cd prac5/prac51/
+joe trataf
+{
+#!/bin/bash
+
+cat $(find $1 -type f -name "*.txt" 2> /dev/null) | more
+}
+
+cd
+chmod a+x prac5/prac51/trataf
+prac5/prac51/trataf /home/so/velez/MI
+
+7)
+
+joe .profile
+{
+PS1='\u: $PWD>'
+export PS1
+}
+. .profile
+
+8)
+
+cat>prac5/guiones/copiar
+{
+#!/bin/bash
+
+cp $1 $3$2
+}
+
+9)
+
+cd prac5/guiones/
+joe vertodo
+{
+#!/bin/bash
+
+cat $(find . -type f -name "s*.[cp]" -newer $1 2> /dev/null) | sort | more
+}
+
+10)
+
+joe infor
+{
+#!/bin/bash
+
+whoami
+id -g -n
+tty
+date
+cal Marzo 2023
+}

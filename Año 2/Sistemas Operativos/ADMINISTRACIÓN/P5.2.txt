@@ -1,0 +1,125 @@
+2)
+
+mkdir ModuloI/Practica5
+
+3)
+
+YO="Miguel Quiroga"
+
+4)
+
+joe ModuloI/Practica5/saludos.sh
+{
+#!/bin/bash
+
+date +"%R"
+echo "Saludos $YO"
+ps
+}
+
+5)
+
+export YO
+ModuloI/Practica5/saludos.sh
+
+6)
+
+joe ModuloI/Practica5/contador.sh
+{
+#!/bin/bash
+
+number=$(ls $1 | grep $2 | wc -l)
+
+echo "Al script $0 se le han pasado $# parámetros"
+echo "En el directorio $1 hay $number ficheros que contienen la cadena $2,
+donde $1 es el valor del primer parámetro, $2 es el valor del segundo parámetro y
+$number es la cantidad de ficheros que hay en el directorio que contienen la cadena pasada como segundo parámetro."
+echo "\"Fin del script\""
+}
+
+7)
+
+man sleep
+
+8)
+
+joe ModuloI/Practica5/personal.sh
+{
+#!/bin/bash
+
+echo "Introduce tu edad: "
+read EDAD
+
+alias ocultos='ls -a | grep "^\."'
+
+sleep 1
+
+echo "\"Find del Script\""
+}
+
+9)
+
+. ModuloI/Practica5/personal.sh
+
+10)
+
+ocultos
+
+11)
+
+joe ModuloI/Practica5/salida.sh
+{
+#!/bin/bash
+
+echo "El script se cerrará en unos segundos con código de error de salida 15"
+
+sleep 5
+
+exit 15
+}
+
+12)
+
+echo $?
+
+13)
+
+joe ModuloI/Practica5/padre.sh
+{
+#!/bin/bash
+
+echo "Proceso padre (inicio)..."
+
+export V1=88
+
+echo "V1=$V1"
+
+ps -u
+
+ModuloI/Practica5/hijo.sh
+
+echo "V1=$V1"
+echo "Proceso padre (fin)..."
+}
+
+joe ModuloI/Practica5/hijo.sh
+{
+#!/bin/bash
+
+echo "Proceso hijo (inicio)..."
+
+echo "V1=$V1"
+
+V1=19
+
+echo "V1=$V1"
+
+ps -u
+
+echo "Proceso hijo (fin)..."
+}
+
+14)
+
+chmod a+x ModuloI/Practica5/padre.sh ModuloI/Practica5/hijo.sh
+./ModuloI/Practica5/padre.sh

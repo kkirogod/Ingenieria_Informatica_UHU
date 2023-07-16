@@ -1,0 +1,88 @@
+PRÁCTICA 3.2
+
+1)
+
+echo Practica 3: Manejo de Shell – Inicio…
+
+2)
+
+mkdir ModuloI/Practica3
+cd ModuloI/
+
+3)
+
+find ~ -type f -size -100c -printf "%f -> %s\n"
+
+4)
+
+cp /home/so/ficheros/infinito Practica3/
+
+5)
+
+chmod a=x Practica3/infinito
+
+6)
+
+Practica3/infinito
+
+7)
+
+ps l
+
+9)
+
+Practica3/infinito &
+
+10)
+
+ps l 
+ o 
+jobs
+
+11)
+
+fg 1
+(Ctrl+C)
+
+12)
+
+find ~ -type f -size -100c -printf "%f -> %s\n" > Practica3/pequeños
+
+13)
+
+cd Practica3
+
+14)
+
+id -un > minfo
+tty >> minfo
+id -gn >> minfo
+
+15)
+
+find /etc -type f -mtime +100 -printf "%f\n" 2> /dev/null
+
+16)
+
+find /etc -type f -mtime +100 -printf "%f\n" 2> err
+
+17)
+
+find /var/ -name "cr*" &> crons
+
+18)
+
+find ~ -type d | wc -l
+
+19)
+
+who | sort -r > usersort
+
+20)
+
+more $(find ~ -type f -name "[fs]*")
+
+21)
+
+mkdir mas2
+cp $(find ~/ModuloI/ -type f -atime +2) mas2

@@ -1,0 +1,87 @@
+PRÁCTICA 4.1
+
+1)
+
+mkdir -p prac4/prac41 prac4/prac42/tmp1 prac4/prac42/tmp2 prac4/prac43
+
+2)
+
+cd prac4/prac43/
+chmod go-rwx ../ ../prac42/ ../prac42/tmp1/ ../prac42/tmp2/
+
+3)
+
+cd ../prac42/
+cat > tmp1/prueba
+Este es un fichero de prueba
+(Ctrl+D)
+cat >> tmp1/prueba
+Esta frase se ha añadido después
+(Ctrl+D)
+
+4)
+
+set | head -52
+echo $PATH
+
+5)
+
+ORIGEN='/home/so/velez/MI'
+DESTINO1='/home/miguel.quiroga/prac4/prac42/tmp1/'
+DESTINO2='/home/miguel.quiroga/prac4/prac42/tmp2/'
+echo $DESTINO1
+echo $DESTINO2
+cp $(find $ORIGEN -type f -name "*p*.txt") $DESTINO1
+
+6)
+
+cd ../prac43/
+alias fnuevos='find ~ -type f -amin -180 -name ".*[eyc]" | more -1'
+
+7)
+
+alias
+alias dir='ls -a -l | sort | more'
+alias dirinverso='ls -a -l | sort -r | more'
+alias fecha='date +"Hoy es %A, %d de %B de %Y. Chao"'
+alias hora='date +"Son las %H horas y %M minutos. Chao"'
+alias cd..='cd ..'
+
+8)
+
+who | sort > ../prac42/tmp2/usuarios
+
+9)
+
+cd ..
+ksh
+set
+PS1='Comando::>'
+
+10)
+
+exit
+who | wc -l
+
+11)
+
+PS1='\u: $PWD>'
+
+12)
+
+PS2='cierre las comillas, por favor'
+
+13)
+
+joe .profile
+PATH=$PATH:.
+ORIGEN="/home/so/velez/MI"
+export ORIGEN
+(Ctrl+K+X)
+
+14)
+
+joe .profile
+alias fecha='date +"Hoy es %A, %d de %B de %Y. Chao"'
+alias hora='date +"Son las %H horas y %M minutos. Chao"'
+. .profile

@@ -1,0 +1,67 @@
+PRÁCTICA 3.1
+
+1)
+
+mkdir -p prac3/prac31/tmp1 prac3/prac32/tmp2 prac3/prac33/tmp3
+
+2)
+
+chmod go-rwx prac3 prac3/prac31/ prac3/prac32/ prac3/prac33/
+
+3)
+
+ls -a -l
+
+4)
+
+find . -name "*[m0-9]*" -type d | wc -l
+
+5)
+
+find /bin -type f -name "[AaEeIiOoUu]*" -mtime +1 > prac3/prac31/tmp1/comandos
+
+6)
+
+find / -name "[AaEeIiOoUu0-9][!0-9]??.[cp]" | more 					(P)
+
+7)
+
+cp $(find . -type f -name "sol*p*") prac3/prac32/tmp2/
+
+8)
+
+cd prac3/prac33
+mv $(find ~ -type f -name "*~") tmp3/
+rm tmp3/*~
+
+9)
+
+cd ..
+cal Marzo 2023 > prac3/prac32/2_cuatrimestre
+cal Abril 2023 >> prac3/prac32/2_cuatrimestre
+cal Mayo 2023 >> prac3/prac32/2_cuatrimestre
+cal Junio 2023 >> prac3/prac32/2_cuatrimestre
+
+10)
+
+sort > prac3/prac32/ciudades
+cordoba
+sevilla
+huelva
+almeria
+cadiz
+malaga
+jaen
+granada
+"Ctrl+D"
+
+11)
+
+find /home/ -maxdepth 1 -printf "%P\n" | sort -r > prac3/prac32/usuarios
+
+12)
+
+id -un > prac3/prac32/personal
+id -u >> prac3/prac32/personal
+id -gn >> prac3/prac32/personal
+id -g >> prac3/prac32/personal

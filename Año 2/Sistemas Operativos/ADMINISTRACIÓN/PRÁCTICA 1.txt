@@ -1,0 +1,86 @@
+1)
+
+mkdir -p ./PE1/Guiones ./PE1/ficheros/letras ./PE1/ficheros/numeros
+
+2)
+
+cd /home/miguel.quiroga/PE1/Guiones/
+
+3)
+
+cp $(find /home/so/ficheros/ -type f -name "[aeiou]*") /home/miguel.quiroga/PE1/ficheros/
+
+4)
+
+mv $(find ../ficheros/ -type f -name "*[0-9]*") ../ficheros/numeros/
+
+5)
+
+rm $(find ../ficheros/ -type f -name "???????*" -maxdepth 1)
+
+6)
+
+cat /home/miguel.quiroga/PE1/ficheros/numeros/a_cancion2 | more
+
+7)
+
+chmod 740 $(find ../ficheros/numeros/ -maxdepth 1 -type f)
+
+8)
+
+chmod g+w ./
+
+9)
+
+cd
+
+10)
+
+ln PE1/ficheros/numeros/ejecutable5 PE1/Guiones/
+
+11)
+
+find . -type f -links +1 -not -perm g=x -printf "El fichero %f ocupa %s bytes\n"
+
+12)
+
+joe .profile
+
+PATH=$PATH:/home/miguel.quiroga/PE1/Guiones/
+
+FICHEROS="/home/miguel.quiroga/PE1/ficheros/"
+export FICHEROS
+
+alias hora='date +"%H.%M"'
+
+(Ctrl+K+X)
+
+13)
+
+. .profile
+
+14)
+
+joe .profile
+
+alias arbold='find . -maxdepth 1 -type d -printf "%f\n"'
+
+(Ctrl+K+X)
+
+. .profile
+
+15)
+
+find /etc/ -type f -name "*.conf" -atime -100 -size -2k > PE1/Guiones/busqueda 2> PE1/ficheros/letras/errores
+
+16)
+
+cat $(find /home/so/ficheros/ -type f -name "[!.]*" -ctime -20 2> /dev/null) | more
+
+17)
+
+ps -A | grep "/usr/bin/" | wc -l
+
+18)
+
+head -n 2 $(find . -type f -name ".*") | more

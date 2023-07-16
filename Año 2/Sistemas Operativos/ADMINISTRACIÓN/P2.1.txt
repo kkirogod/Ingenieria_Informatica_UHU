@@ -1,0 +1,101 @@
+PRÁCTICA 2.1
+
+1)
+
+mkdir -p ./prac2/prac21/tmp1 ./prac2/prac22 ./prac2/prac23/tmp2
+
+2)
+
+cd prac2
+cp /home/so/velez/MI/f1.txt /home/so/velez/MI/f2.txt ./
+
+3)
+
+chmod go-rw ./
+
+4)
+
+chmod u=rwx,g=r,o= ./f1.txt ./f2.txt
+chmod 740 f1.txt f2.txt (solución)
+
+5)
+
+cd /home/miguel.quiroga/prac2/prac21/
+cp ../f1.txt ../f2.txt ./tmp1/
+mv ./tmp1/f1.txt ./tmp1/f21.txt
+
+6)
+
+mv ./tmp1/f2.txt ../prac23/tmp2/f23.txt
+
+7)
+
+cd ../prac23/tmp2/
+find ~ -name ?[rtRT]*[!0-9][0-9]
+
+8)
+
+find ~ ! -type d -newer /home/miguel.quiroga/prac1/solp1.txt -mtime -3
+
+9)
+
+grep -i llama ../../f1.txt ../../f2.txt                                          (p)
+
+10)
+
+ls -l prac21/tmp1/
+wc -c prac21/tmp1/f21.txt
+
+11)
+
+cal July 1993 -> Jueves
+
+12)
+
+date +'Bienvenido. Son las %H horas y %M minutos del %A %d de %B.%nHa sido un placer'
+
+13)
+
+cd ~
+sort -r -o ./prac2/prac22/usu.orden.pabajo /home/so/velez/MI/usuarios04-05.txt
+sort -o ./prac2/prac22/usu.orden.parriba /home/so/velez/MI/usuarios04-05.txt
+
+14)
+
+cat ./prac2/f1.txt
+tail -n 2 /home/so/velez/MI/solf1.txt
+
+15)
+
+cd ./prac2/
+wc -c ./prac23/tmp2/f23.txt
+
+16)
+
+ln ../prac1/solp1.txt solucionprac1
+
+17)
+
+ln -s prac23/tmp2/ temporal
+
+18)
+
+file solucionprac1
+file temporal
+
+19)
+
+who -q
+
+20)
+
+ps u
+kill 17057
+
+21)
+
+write velez
+
+22)
+
+chmod a-x,o-rw solp2.txt

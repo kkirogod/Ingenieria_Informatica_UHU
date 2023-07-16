@@ -1,0 +1,122 @@
+1) (ya estaba creado)
+
+mkdir -p ./PE1/Guiones ./PE1/ficheros/letras ./PE1/ficheros/numeros
+
+2)
+
+cd /home/miguel.quiroga/PE1/Guiones/
+
+3)
+
+joe facilon
+{
+#!/bin/bash
+
+echo "Parámetro 1: $1"
+echo "Parámetro 2: $2"
+
+PAR1=$1
+
+cal $2 2023
+}
+
+4)
+
+chmod a+x facilon
+
+. facilon parametro1 4
+
+5)
+
+joe comprueba
+{
+#!/bin/bash
+
+while true
+do
+        if [ -f prueba.txt ]
+        then
+                echo "EXISTE"
+        else
+                echo "NO EXISTE"
+        fi
+
+        sleep 30
+done
+}
+
+6)
+
+joe copia_txt
+{
+#!/bin/bash
+
+if [ -d $1 ]
+then
+        if [ ! -d $2 ]
+        then
+                mkdir $2
+        fi
+
+        cp $(find $1 -maxdepth 1 -type f -name "*.txt") $2
+
+else
+        echo "ERROR"
+fi
+}
+
+7)
+
+joe soluciones
+{
+#!/bin/bash
+
+if [ $# -ne 2 ]
+then
+        echo "ERROR"
+else
+        NUM=0
+
+        for i in $(find $1 -type f -name "sol*" -newer $2)
+        do
+                echo "Tamaño en bytes de $i: $(stat $i --printf %s) bytes"
+                NUM=$(($NUM + 1))
+        done
+
+        echo "Ficheros encontrados: $NUM"
+fi
+}
+
+8)
+
+joe copion
+{
+#!/bin/bash
+
+if [ $# -ne 2 ]
+then
+        echo "Número de parámetros incorrecto"
+
+elif [ ! -d $1 ] && [ ! -d $2 ]
+then
+        echo "Los parámetros deben ser directorios válidos"
+else
+        num=0
+
+        for i in $(find $1 -maxdepth 1 -type f -printf "%f\n")
+        do
+                echo $i
+                head -n 2 $1/$i
+
+                echo "Quiere copiarlo? "
+                read resp
+
+                case $resp in
+                        s*)     cp $1/$i $2
+                                num=$(($num + 1));;
+                esac
+        done
+
+        echo "Cantidad de ficheros copiados: $num"
+fi
+}
