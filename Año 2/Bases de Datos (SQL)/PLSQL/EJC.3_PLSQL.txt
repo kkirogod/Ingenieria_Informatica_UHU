@@ -1,0 +1,71 @@
+create or replace PROCEDURE llamadas_cia(nom compañia.nombre%type, fecha telefono.f_contrato%type)
+IS 
+    num_llamadas number(4,0);
+    sinLlamadas exception;
+    num_ll number(4, 0);
+    num_100 number(4, 0);
+    num_total number(4, 0);
+    porcentaje float;
+
+    cursor c_tlfs is
+        select t.numero
+        from telefono t inner join compañia c on t.compañia=c.cif
+        where c.nombre=nom;
+
+
+    cursor c_llamadas(tlf TELEFONO.numero%TYPE) is
+        select l.duracion
+        from llamada l
+        where to_char(l.fecha_hora, 'dd/mm/yy')=fecha
+              and l.tf_origen=tlf;
+
+	BEGIN
+        --contamos el num de llamadas en dicha fecha
+        select count(*) into num_llamadas  
+        from llamada l 
+        where to_char(l.fecha_hora, 'dd/mm/yy')=fecha;
+
+        if num_llamadas=0 then 
+            raise sinLlamadas;
+        end if;
+
+        --si hay llamadas, continúo:
+
+        dbms_output.put_line('Llamadas realizadas por los teléfonos de la Compañía “' || nom || '”');
+        dbms_output.put_line('-------------------------------------------');
+        dbms_output.put_line('Tlf. Origen  Num_LL  Num_100   %');
+        dbms_output.put_line('-------------------------------------------');
+
+         num_total := 0;
+
+        for tlf in c_tlfs loop
+            num_ll := 0;
+            num_100 := 0;
+            porcentaje := 0;
+
+            for llamada in c_llamadas(tlf.numero) loop
+                num_ll := num_ll + 1;
+
+                if llamada.duracion > 100 then
+                    num_100 := num_100 + 1;
+                end if;
+            end loop;
+
+            if num_ll <> 0 then    -- MUY IMPORTANTE, SI NO SALTA EXCEPCIÓN
+                porcentaje := (num_100*100)/num_ll;
+            end if;
+
+            num_total := num_total + num_ll;
+
+            dbms_output.put_line(tlf.numero || '    ' || num_ll || '       ' || num_100 || '         ' || porcentaje || '%');
+        end loop;
+
+        dbms_output.put_line('-------------------------------------------');
+        dbms_output.put_line('Numero Llamadas Realizadas: ' || num_total);
+
+    EXCEPTION
+        when sinLlamadas then
+            dbms_output.put_line('No hay llamadas en la fecha ' || fecha || ' en la BD');
+        WHEN OTHERS THEN
+            dbms_output.put_line('Ha ocurrido un error');
+END;

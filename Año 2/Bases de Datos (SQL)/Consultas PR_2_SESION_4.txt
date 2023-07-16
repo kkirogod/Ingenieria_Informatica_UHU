@@ -1,0 +1,58 @@
+4.1
+
+SELECT c.nombre
+FROM mf.cliente c inner join mf.telefono t on t.cliente=c.dni
+WHERE EXISTS(select *                 
+             from mf.llamada l
+             where to_char(l.fecha_hora, 'dd/mm/yy')='16/10/06'
+                   and l.tf_origen=t.numero); --DENTRO DEL EXISTS SIMEPRE DEBE HABER
+                                              --UNA CORRELACIÓN CON LA CONSULTA EXTERNA
+
+4.2
+
+SELECT c.nombre
+FROM mf.cliente c inner join mf.telefono t on t.cliente=c.dni
+WHERE EXISTS(select *                 
+             from mf.llamada l
+             where l.duracion<'90'
+                   and l.tf_origen=t.numero);
+
+4.3 
+
+SELECT c.nombre
+FROM mf.cliente c inner join mf.telefono t on t.cliente=c.dni
+WHERE NOT EXISTS(select *                 
+             from mf.llamada l
+             where extract(month from l.fecha_hora)='09'
+                   and l.tf_origen=t.numero)
+      and EXISTS(select *                 
+             from mf.compañia cm
+             where cm.nombre='Kietostar'
+                   and cm.cif=t.compañia);
+
+4.4
+
+SELECT *
+FROM mf.telefono t
+WHERE EXISTS(select *                 
+             from mf.llamada l
+             where l.tf_destino='654234234'
+                   and l.tf_origen=t.numero)
+      and NOT EXISTS(select *                 
+                     from mf.llamada l
+                     where l.tf_destino='666789789'
+                           and l.tf_origen=t.numero);
+
+4.5
+
+SELECT c.nombre, t.numero
+FROM mf.cliente c inner join mf.telefono t on t.cliente=c.dni
+WHERE EXISTS(select *                 
+             from mf.compañia cm
+             where cm.nombre='Kietostar'
+                   and cm.cif=t.compañia)
+      and NOT EXISTS(select *                 
+                     from (mf.compañia cm inner join mf.telefono t2 on t2.compañia=cm.cif)
+                           inner join mf.llamada l on l.tf_destino=t2.numero
+                     where cm.nombre='Kietostar'
+                           and l.tf_origen=t.numero);

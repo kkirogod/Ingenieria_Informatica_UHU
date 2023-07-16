@@ -1,0 +1,61 @@
+drop table LLAMADA;
+drop table TELEFONO;
+drop table CLIENTE;
+drop table TARIFA;
+drop table COMPAÑIA;
+
+CREATE TABLE COMPAÑIA(
+  cif char(9),
+  nombre varchar2(20) NOT NULL,
+  web varchar2(30),
+  CONSTRAINT compañiaClave PRIMARY KEY (cif),
+  CONSTRAINT comañiaUnica UNIQUE(nombre)
+);
+
+CREATE TABLE TARIFA(
+  tarifa char(10),
+  compañia char(9),
+  descripcion varchar2(50),
+  coste number(3, 2) NOT NULL,
+  CONSTRAINT tarifaClave PRIMARY KEY (tarifa, compañia),
+  CONSTRAINT tarifaAjena FOREIGN KEY (compañia) REFERENCES COMPAÑIA(cif) ON DELETE CASCADE,
+  CONSTRAINT tarifaCsote CHECK (coste <= 1.5 AND coste >= 0.05)
+);
+
+CREATE TABLE CLIENTE(
+  dni char(9),
+  nombre varchar2(50) NOT NULL,
+  f_nac date,
+  direccion varchar2(100),
+  cp char(6),
+  ciudad varchar2(50),
+  provincia varchar2(50),
+  CONSTRAINT clienteClave PRIMARY KEY (dni)
+);
+
+CREATE TABLE TELEFONO(
+  numero char(9),
+  f_contrato date,
+  tipo char(1),
+  puntos number(6, 0),
+  compañia char(9) NOT NULL,
+  tarifa char(10) NOT NULL,
+  cliente char(9),
+  CONSTRAINT telefonoClave PRIMARY KEY (numero),
+  CONSTRAINT telefonoAjenaTarifa FOREIGN KEY (tarifa, compañia) REFERENCES TARIFA(tarifa, compañia),
+  CONSTRAINT telefonoAjenaCompañia FOREIGN KEY (compañia) REFERENCES COMPAÑIA(cif),
+  CONSTRAINT telefonoAjenaCliente FOREIGN KEY (cliente) REFERENCES CLIENTE(dni),
+  CONSTRAINT telefonoTipo CHECK (tipo IN ('T', 'C'))
+);
+
+CREATE TABLE LLAMADA(
+  tf_origen char(9),
+  tf_destino char(9),
+  fecha_hora timestamp,
+  duracion number(5, 0) NOT NULL,
+  CONSTRAINT llamadaClave PRIMARY KEY (tf_origen, fecha_hora),
+  CONSTRAINT llamadaAjenaOrig FOREIGN KEY (tf_origen) REFERENCES TELEFONO(numero),
+  CONSTRAINT llamadaAjenaDest FOREIGN KEY (tf_destino) REFERENCES TELEFONO(numero),
+  CONSTRAINT fhoraUnica UNIQUE(fecha_hora),
+  CONSTRAINT llamadaDistinta CHECK (tf_origen <> tf_destino)
+);

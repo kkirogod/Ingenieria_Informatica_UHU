@@ -1,0 +1,28 @@
+create or replace FUNCTION facturacion(tlf MF.LLAMADA.tf_origen%TYPE, anio INTEGER) RETURN FLOAT IS --Igual que FLOAT, puedo poner NUMBER(10,2)
+
+	importe NUMBER(10,2):=0;	--10 numeros: 8 enteros y 2 decimales
+	facturacionBaja EXCEPTION;
+
+	BEGIN
+		SELECT SUM(LL.duracion/60*TA.coste) INTO importe	--Guardo la query en una variable
+		FROM MF.TELEFONO T INNER JOIN MF.TARIFA Ta USING (TARIFA, COMPAÑIA)
+			INNER JOIN MF.LLAMADA LL ON LL.tf_origen=T.numero
+		WHERE LL.tf_origen=tlf AND EXTRACT(year from fecha_hora)=anio
+		GROUP BY LL.tf_origen;
+
+		IF importe<1 THEN
+			RAISE facturacionBaja;
+		END IF;		
+	RETURN importe;
+
+	EXCEPTION
+		WHEN facturacionBaja THEN
+			dbms_output.put_line('Facturacion demasiado baja');
+			RETURN -1;
+		WHEN NO_DATA_FOUND THEN
+			dbms_output.put_line('El telefono no existe o no ha realizado llamadas ese año');
+			RETURN -1;
+		WHEN OTHERS THEN
+			dbms_output.put_line('Ha ocurrido un error');
+			RETURN -1;
+END;
