@@ -1,0 +1,213 @@
+.MODEL SMALL
+.STACK 100h
+.DATA
+
+CADENA      DB 5,0,0,0,0,0,0
+PESO        DB 8,4,2,1
+VALOR_C1    DB 0
+VALOR_C2    DB 0
+SIGNO_C1    DB '+'
+SIGNO_C2    DB '+'
+
+.CODE         
+
+;Inicializamos el segmento de datos
+MOV AX, SEG CADENA
+MOV DS, AX
+
+;capturar cadena de caracteres por teclado
+MOV DX, Offset CADENA
+MOV AH, 0Ah
+INT 21h
+
+;cambiar caracteres ASCII por los numericos correspondientes
+SUB CADENA[2], 48
+SUB CADENA[3], 48
+SUB CADENA[4], 48
+SUB CADENA[5], 48
+
+;calculamos el complemento a 1
+;comprobamos si es negativo
+CMP CADENA[2], 1
+JE ESNEG;
+
+;suponemos que es positivo
+MOV BX, 0
+
+MOV AH, 00h                     ;inicializamos el registro BX
+MOV AL, CADENA[3]
+MUL PESO[1]
+ADD BX, AX                      ;sumamos lo que se ha almacenado en el reg. acumulador(AX)
+
+MOV AH, 00h
+MOV AL, CADENA[4]
+MUL PESO[2]
+ADD BX, AX
+
+MOV AH, 00h
+MOV AL, CADENA[5]
+MUL PESO[3]
+ADD BX, AX
+
+JMP FINC1
+
+;suponemos que es negativo
+ESNEG:
+
+MOV BX, 0
+MOV AH, 00h
+MOV AL, CADENA[3]
+NOT AL                           ;invertimos el bit
+AND AL, 1
+MUL PESO[1]
+ADD BX, AX
+
+MOV AH, 00h
+MOV AL, CADENA[4]
+NOT AL
+AND AL, 1
+MUL PESO[2]
+ADD BX, AX
+
+MOV AH, 00h
+MOV AL, CADENA[5]
+NOT AL
+AND AL, 1
+MUL PESO[3]
+ADD BX, AX
+
+MOV SIGNO_C1, '-'
+
+
+FINC1:
+MOV VALOR_C1, BL
+
+
+
+
+;calculamos el complemento a 2
+
+
+;Evaluar si es positivo o no
+CMP CADENA[2], 1
+JE ESNEG2:
+
+;No es negativo luego
+MOV BX, 0
+
+MOV AH, 00h
+MOV AL, CADENA[3]
+MUL PESO[1]
+ADD BX, AX
+
+MOV AH, 00h
+MOV AL, CADENA[4]
+MUL PESO[2]
+ADD BX, AX
+
+MOV AH, 00h
+MOV AL, CADENA[5]
+MUL PESO[3]
+ADD BX, AX
+
+JMP FINC2
+
+ESNEG2:
+
+;Es negativo, lo invierto, lo indico y le sumo uno
+
+MOV BX, 1
+
+MOV AH, 00h
+MOV AL, CADENA[3]
+NOT AL
+AND AL, 1
+MUL PESO[1]
+ADD BX, AX
+
+MOV AH, 00h
+MOV AL, CADENA[4]
+NOT AL
+AND AL, 1
+MUL PESO[2]
+ADD BX, AX
+
+MOV AH, 00h
+MOV AL, CADENA[5]
+NOT AL
+AND AL, 1
+MUL PESO[3]
+ADD BX, AX
+
+MOV SIGNO_C2, '-'
+
+FINC2:
+
+ADD VALOR_C2, BL
+    
+      
+      
+;Procederemos a mostrar el resultado por pantalla
+;Segmento--->Memoria
+MOV AX, 0B800h
+MOV ES, AX
+
+
+MOV AH, 00001111b ; caracter impreso en pantalla con fondo negro y texto blanco
+
+;Mostrar complemento a 1
+MOV SI,160                ;inicializamos el reg.SI con 160 ;ENTENDER por qúe con 160 sí funciona y no con 0
+
+MOV AL, 'C'
+MOV ES:[SI], AX
+INC SI
+INC SI
+MOV AL, '1'
+MOV ES:[SI], AX
+INC SI
+INC SI
+MOV AL, ':'
+MOV ES:[SI], AX
+INC SI
+INC SI  
+MOV AL, SIGNO_C1
+MOV ES:[SI], AX
+INC SI
+INC SI
+MOV AL, VALOR_C1 
+ADD AL, 48         ;ENTENDER
+MOV ES:[SI], AX
+
+;Mostrar complemento a 2
+MOV DI,320                   ;inicializamos el reg.DI con 320 ;ENTENDER por qúe con 320 sí funciona y no con 0
+
+MOV AH, 00001111b
+MOV AL, 'C'
+MOV ES:[DI], AX
+INC DI
+INC DI
+MOV AL, '2'
+MOV ES:[DI], AX
+INC DI
+INC DI
+MOV AL, ':'
+MOV ES:[DI], AX
+INC DI
+INC DI
+MOV AL, SIGNO_C2
+MOV ES:[DI], AX
+INC DI
+INC DI
+MOV AL, VALOR_C2 
+ADD AL, 48        ;ENTENDER
+MOV ES:[DI], AX
+
+
+;Devolver el control al OS
+MOV AX, 4C00h
+INT 21h
+
+ends
+
+ends start
+
