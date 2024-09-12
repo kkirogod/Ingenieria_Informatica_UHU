@@ -1,3 +1,3 @@
-All my tasks and proyects of my university years.
+Here are most of my projects from my university days.
 
-Todas mis tareas y proyectos de mis años de universidad.
+Aquí están gran parte de mis proyectos de mi etapa universitaria.
